@@ -1,6 +1,6 @@
 # coding: utf-8
 
-from os.path import isdir
+from os.path import isdir, realpath
 import argparse
 import os
 
