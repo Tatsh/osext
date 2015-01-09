@@ -1,5 +1,6 @@
-from osext.test import pushdtest
+from osext.test import argparse_actions_test, pushdtest
 import unittest
 
-suite = unittest.TestLoader().loadTestsFromModule(pushdtest)
-unittest.TextTestRunner(verbosity=2).run(suite)
+for test in (pushdtest, argparse_actions_test):
+    suite = unittest.TestLoader().loadTestsFromModule(test)
+    unittest.TextTestRunner(verbosity=2).run(suite)
